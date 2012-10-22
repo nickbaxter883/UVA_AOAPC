@@ -3,3 +3,4 @@ bin
 .project
 .settings
 .metadata
+hs_err_*.log

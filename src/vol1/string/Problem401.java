@@ -6,7 +6,7 @@ import java.io.FileReader;
 import java.io.InputStreamReader;
 import java.io.Reader;
 
-class Problem401 {
+public class Problem401 {
 	public static void main(String[] args) throws Exception {
 		Reader stdin;
 		if (args.length == 1)

@@ -21,6 +21,6 @@ public class Template {
 		else
 			stdin = new InputStreamReader(System.in);
 		
-		return (BufferedReader)stdin;
+		return new BufferedReader(stdin);
 	}
 }

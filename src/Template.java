@@ -1,4 +1,4 @@
-//List of Conquests
+//Description
 //package default
 
 import java.io.BufferedReader;
@@ -10,7 +10,7 @@ public class Template {
 	static BufferedReader br;
 	
 	public static void main(String[] args) throws Exception {
-		br = getBufferedReader(args, "/input/vol1/sorting/Problem10420");
+		br = getBufferedReader(args, "/input/vol1/sorting/Problem###");
 		br.readLine();
 	}
 	

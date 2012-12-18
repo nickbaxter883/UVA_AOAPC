@@ -5,6 +5,8 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.InputStreamReader;
 import java.io.Reader;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.LinkedList;
 import java.util.Scanner;
 import java.util.Stack;
@@ -18,14 +20,41 @@ public class Problem120 {
 		String pancakeData;
 		while ((pancakeData = br.readLine()) != null) {
 			Scanner sc = new Scanner(pancakeData);
-			Stack<Integer> pancakeStack = new Stack<Integer>();
-			while (sc.hasNextInt())
-				pancakeStack.push(sc.nextInt());
-			
 			System.out.println(pancakeData);
-			System.out.println(pancakeStack.toString());
+			
+			Stack<Integer> pancakeStack = new Stack<Integer>();
+			ArrayList<Integer> sorted = new ArrayList<Integer>();
+			
+			while (sc.hasNextInt()) {
+				int pancake = sc.nextInt();
+				pancakeStack.push(pancake);
+				sorted.add(pancake);
+			}
+			
+			//Because problem reads top to bottom
 			flip(pancakeStack, 0);
-			System.out.println(pancakeStack.toString());
+			Collections.sort(sorted);
+			//Largest pancakes are on bottom
+			Collections.reverse(sorted);
+			
+			for (int i=0; i<pancakeStack.size(); i++) {
+				Integer goal = sorted.get(i);
+				if (pancakeStack.get(i) != goal) {
+					//Find a later occurance in stack
+					int location = pancakeStack.lastIndexOf(goal);
+					if (location != pancakeStack.size()-1) {
+						//Flip it to end
+						flip(pancakeStack, location);
+						System.out.print((location+1) + " ");
+					}
+					
+					//Flip it where its supposed to go
+					flip(pancakeStack, i);
+					System.out.print((i+1) + " ");
+					//System.out.println(pancakeStack.toString());
+				}
+			}
+			System.out.println(0);
 		}
 	}
 	
@@ -33,13 +62,11 @@ public class Problem120 {
 		if (pos < 0 || pos > stack.size())
 			throw new Exception();
 		
-		System.out.println(stack.size());
-		LinkedList<Integer> queue = new LinkedList<Integer>(); 
-		for (int i=0; i<stack.size()-pos; i++) {
+		LinkedList<Integer> queue = new LinkedList<Integer>();
+		int iterations = stack.size()-pos;
+		for (int i=0; i<iterations; i++) {
 			queue.add(stack.pop());
 		}
-		System.out.println("-> " + stack.toString());
-		System.out.println("-> " + queue.toString());
 		while (!queue.isEmpty()) {
 			stack.push(queue.remove());
 		}

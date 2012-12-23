@@ -1,5 +1,5 @@
 //Description
-package vol1.miscmath;
+//package vol1.miscmath;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

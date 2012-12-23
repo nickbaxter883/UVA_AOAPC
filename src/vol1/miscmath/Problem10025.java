@@ -11,8 +11,7 @@ public class Problem10025 {
 	
 	public static void main(String[] args) throws Exception {
 		br = getBufferedReader(args, "/input/vol1/miscmath/Problem10025");
-		String line;
-		
+				
 		int numNumbers = Integer.parseInt(br.readLine());
 		br.readLine();
 		for (int number=0; number<numNumbers; number++) {

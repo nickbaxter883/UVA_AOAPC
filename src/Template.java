@@ -1,5 +1,5 @@
 //Description
-//package vol1.miscmath;
+//package vol1.numberTheory;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -10,7 +10,7 @@ public class Template {
 	static BufferedReader br;
 	
 	public static void main(String[] args) throws Exception {
-		br = getBufferedReader(args, "/input/vol1/miscmath/Problem###");
+		br = getBufferedReader(args, "/input/vol1/numberTheory/Problem###");
 		br.readLine();
 	}
 	

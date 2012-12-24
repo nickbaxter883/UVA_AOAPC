@@ -32,13 +32,13 @@ public class Problem10014 {
 	}
 	
 	private static double computeA1 (double a0, double aNp1, ArrayList<Double> c) {
-		double partialSum = 0;
+		double sum = 0;
 		int n = c.size();
 		
 		for (int i=0; i<n; i++)
-			partialSum += (n-i)*c.get(i);
+			sum += (n-i)*c.get(i);
 		
-		return (aNp1 + n*a0 - 2*partialSum) / (n+1);
+		return (aNp1 + n*a0 - 2*sum) / (n+1);
 	}
 	
 	private static BufferedReader getBufferedReader(String[] args, String path) throws Exception {

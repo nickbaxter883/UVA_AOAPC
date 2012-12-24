@@ -8,6 +8,7 @@ import java.io.Reader;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.Map;
 
 public class Problem107 {
 	public static void main(String[] args) throws Exception {
@@ -32,7 +33,7 @@ public class Problem107 {
 				n = 0;
 			}
 			else {
-				HashMap<Integer,Integer> k2pf = primeFactorization(k2);
+				Map<Integer,Integer> k2pf = primeFactorization(k2);
 				//System.out.println(k2pf.toString());
 				
 				//g is the largest possible exponent
@@ -45,7 +46,7 @@ public class Problem107 {
 				else {
 					base = (int)Math.pow(k2, 1/(double)g);
 					//System.out.println(base + " ^ " + g);
-					HashMap<Integer, Integer> gpf = primeFactorization(g);
+					Map<Integer, Integer> gpf = primeFactorization(g);
 					//System.out.println(gpf.toString());
 					Iterator<Integer> iter = gpf.keySet().iterator();
 					
@@ -69,7 +70,7 @@ public class Problem107 {
 	}
 
 	private static int findExponent(int base, int exp, int goal,
-			HashMap<Integer, Integer> exppf, Iterator<Integer> expIter) {
+			Map<Integer, Integer> exppf, Iterator<Integer> expIter) {
 		int expBase = expIter.next();
 		do {
 			if (expIter.hasNext()) {
@@ -115,11 +116,11 @@ public class Problem107 {
 		return smaller;
 	}
 
-	private static HashMap<Integer, Integer> primeFactorization(int num) {
+	private static Map<Integer, Integer> primeFactorization(int num) {
 		if (num <= 0)
 			return null;
 		
-		HashMap<Integer,Integer> factors = new HashMap<Integer,Integer>();
+		Map<Integer,Integer> factors = new HashMap<Integer,Integer>();
 		for (int i=2; i<=num/2;) {
 			if (num%i == 0) {
 				//increment exp

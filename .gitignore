@@ -4,3 +4,5 @@ bin
 .settings
 .metadata
 hs_err_*.log
+.sonar
+sonar-project.properties

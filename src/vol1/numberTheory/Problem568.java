@@ -9,9 +9,7 @@ import java.util.ArrayList;
 
 public class Problem568 {
 	static BufferedReader br;
-	static int[] powerRemainders = {2, 4, 8, 6};
-	static int[] factorialRemainders = {1, 1, 2, 6, 24, 12, 72, 504, 4032, 36288};
-	
+		
 	public static void main(String[] args) throws Exception {
 		br = getBufferedReader(args, "/input/vol1/numberTheory/Problem568");
 		String line;

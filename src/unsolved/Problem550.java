@@ -5,7 +5,6 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.InputStreamReader;
 import java.io.Reader;
-import java.math.BigInteger;
 
 public class Problem550 {
 	static BufferedReader br;
@@ -16,7 +15,7 @@ public class Problem550 {
 		while ((line = br.readLine()) != null) {
 			String[] input = line.split("\\s+");
 			
-			BigInteger base = new BigInteger(input[0]);
+			/*BigInteger base = new BigInteger(input[0]);
 			BigInteger firstDigit = new BigInteger(input[1]);
 			BigInteger multiplier = new BigInteger(input[2]);
 			
@@ -31,17 +30,29 @@ public class Problem550 {
 				numerator = firstDigit.multiply(power.subtract(BigInteger.ONE));
 				
 				if (numerator.mod(denominator).equals(BigInteger.ZERO)) {
-					/*if (numerator.divide(denominator).multiply(multiplier).multiply(base).multiply(base)
-					 * .divide(power).mod(base).equals(BigInteger.ZERO)) {
-						continue;
-					}*/
-					
-					System.out.println(numerator.divide(denominator));
-					//System.out.println(x);
+										
+					//System.out.println(numerator.divide(denominator));
+					System.out.println(x);
 					break;
 				}
 								
-			} while (true);
+			} while (true);*/
+			
+			int base = Integer.parseInt(input[0]);
+			int firstDigit = Integer.parseInt(input[1]);
+			int multiplier = Integer.parseInt(input[2]);
+			
+			int carry = 0;
+			int lsb = firstDigit;
+			int count = 0;
+			do {
+				lsb = lsb*multiplier + carry;
+				carry = lsb / base;
+				lsb = lsb % base;
+				count++;
+			} while (!(lsb == firstDigit && carry == 0));
+			
+			System.out.println(count);
 		}
 	}
 	

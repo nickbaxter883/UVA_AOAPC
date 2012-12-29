@@ -14,12 +14,15 @@ public class Problem10879 {
 	
 	public static void main(String[] args) throws Exception {
 		br = getBufferedReader(args, "/input/vol1/numberTheory/Problem10879");
+		
 		int numCases = Integer.parseInt(br.readLine());
 		for (int i=1; i<=numCases; i++) {
 			long n = Long.parseLong(br.readLine());
 			Map<Long, Integer> pf = primeFactorization(n);
 			Iterator<Long> iter = pf.keySet().iterator();
+			
 			long m1 = iter.next();
+			
 			long m2;
 			if (pf.get(m1) > 1) {
 				m2 = m1*m1;

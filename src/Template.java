@@ -10,7 +10,7 @@ public class Template {
 	static BufferedReader br;
 	
 	public static void main(String[] args) throws Exception {
-		br = getBufferedReader(args, "/input/vol1/numberTheory/Problem###");
+		br = getBufferedReader(args, "/input/vol1/simpleGeometry/Problem###");
 		br.readLine();
 	}
 	

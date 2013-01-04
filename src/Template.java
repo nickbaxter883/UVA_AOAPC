@@ -1,5 +1,5 @@
 //Description
-//package vol1.numberTheory;
+//package vol1.simpleGeometry;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

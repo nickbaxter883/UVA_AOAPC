@@ -1,5 +1,5 @@
 //Description
-//package vol0;
+//package vol2.lists;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -10,7 +10,7 @@ public class Template {
 	static BufferedReader br;
 	
 	public static void main(String[] args) throws Exception {
-		br = getBufferedReader(args, "/input/vol0/Problem###");
+		br = getBufferedReader(args, "/input/vol2/lists/Problem###");
 		br.readLine();
 	}
 	

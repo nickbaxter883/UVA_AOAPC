@@ -50,10 +50,28 @@ public class Problem127 {
 		}
 	
 		public void play() {
-			int i = 0;
-			while (i < piles.size()) {
-				//this.print();
-				i = collapse(i);
+			int position = 0;
+			while (position < piles.size()) {
+				
+				int collapse1ahead = position + 1;
+				int collapse3ahead = position + 3;
+				
+				if (collapse1ahead < piles.size()) {
+					collapse1ahead = collapse(position+1);
+				}
+				else if (collapse3ahead < piles.size()) {
+					collapse3ahead = collapse(position+3);
+				}
+				
+				if (collapse1ahead != position+1) {
+					position = collapse1ahead;
+				}
+				else if (collapse3ahead != position+3){
+					position = collapse3ahead;
+				}
+				else {
+					position++;
+				}
 			}
 		}
 	
@@ -86,7 +104,7 @@ public class Problem127 {
 				}
 			}
 			
-			return position+1;
+			return position;
 		}
 		
 		public void print() {

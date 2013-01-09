@@ -7,7 +7,7 @@ import java.io.InputStreamReader;
 import java.io.Reader;
 
 public class Template {
-	static BufferedReader br;
+	private static BufferedReader br;
 	
 	public static void main(String[] args) throws Exception {
 		br = getBufferedReader(args, "/input/vol2/lists/Problem###");

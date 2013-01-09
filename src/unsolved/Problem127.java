@@ -1,11 +1,12 @@
 //Accordian Patience
-package vol2.lists;
+package unsolved;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.InputStreamReader;
 import java.io.Reader;
-import java.util.LinkedList;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Stack;
 
 public class Problem127 {
@@ -36,10 +37,10 @@ public class Problem127 {
 	}
 	
 	private static class Accordion {
-		private static LinkedList<Stack<Card>> piles;
+		private static List<Stack<Card>> piles;
 		
 		public Accordion (String[] inputCards){
-			piles = new LinkedList<Stack<Card>>();
+			piles = new ArrayList<Stack<Card>>();
 			
 			for (String inputCard : inputCards) {
 				Stack<Card> pile = new Stack<Card>();

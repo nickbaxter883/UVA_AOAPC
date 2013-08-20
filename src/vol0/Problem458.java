@@ -5,9 +5,6 @@ import java.io.BufferedReader;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.EOFException;
-import java.io.FileReader;
-import java.io.InputStreamReader;
-import java.io.Reader;
 
 public class Problem458 {
 	static BufferedReader br;
@@ -31,15 +28,5 @@ public class Problem458 {
 		catch (EOFException e) {
 			out.flush();
 		}
-	}
-	
-	private static BufferedReader getBufferedReader(String[] args, String path) throws Exception {
-		Reader stdin;
-		if (args.length == 1)
-			stdin = new FileReader(args[0] + path);
-		else
-			stdin = new InputStreamReader(System.in);
-		
-		return new BufferedReader(stdin);
 	}
 }

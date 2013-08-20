@@ -7,15 +7,12 @@ import java.io.InputStreamReader;
 import java.io.Reader;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.ListIterator;
 
 public class Problem133 {
 	private static BufferedReader br;
-	private static class CircularList {
 		
-	}
-	
 	public static void main(String[] args) throws Exception {
+        System.out.println("Testing");
 		br = getBufferedReader(args, "/input/vol2/lists/Problem133");
 		String line;
 		while (true) {

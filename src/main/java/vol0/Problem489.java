@@ -27,7 +27,7 @@ public class Problem489 {
 			int hits = 0;
 			Set<Character> used = new HashSet<Character>();
 			String blank = "";
-			for (char ch : answer.toCharArray()) {
+			for (int i = 0; i < answer.length(); i++) {
 				blank += '*';
 			}
 			

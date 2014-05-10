@@ -13,6 +13,7 @@ public class Problem10420 {
 	public static void main(String[] args) throws Exception {
 		br = getBufferedReader(args, "/input/vol1/sorting/Problem10420");
 		
+		@SuppressWarnings("unused")
 		int numberCases = Integer.parseInt(br.readLine());
 		TreeMap<String, Integer> conquests = getAffairs();
 		for (String s : conquests.keySet())

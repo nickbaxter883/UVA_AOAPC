@@ -138,6 +138,7 @@ public class Problem127 {
 		}
 	}
 	
+	@SuppressWarnings("unused")
 	private static void debug(String message) {
 		if (DEBUG == true) {
 			System.out.println(message);

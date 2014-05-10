@@ -1,8 +1,14 @@
 bin
+build
+
+.gradle
 .classpath
 .project
 .settings
 .metadata
+
+*.swp
 hs_err_*.log
+
 .sonar
 sonar-project.properties

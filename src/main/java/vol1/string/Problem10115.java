@@ -52,6 +52,7 @@ public class Problem10115 {
 		}
 	}
 	
+	@SuppressWarnings("unused")
 	public static void debug(String message) {
 		if (DEBUG == true)
 			System.out.println(message);

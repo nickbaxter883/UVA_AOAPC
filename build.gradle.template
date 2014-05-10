@@ -1,0 +1,33 @@
+apply plugin: "java"
+apply plugin: "eclipse"
+
+/*
+repositories {
+	mavenCentral()
+}
+
+//java plugin - src/sourceset/[java|resources]
+sourceSets {
+	main
+	test
+}
+
+configurations {
+	//sourcesetCompile	
+	//sourcesetRuntime
+	compile
+	runtime
+}
+
+dependencies {
+	//maven coordinate - groupId:artifactId:version
+	compile "log4j"
+}
+
+tasks {
+	compile<ssn>Java
+	process<ssn>Resources
+	<ssn>Classes
+}
+*/
+
